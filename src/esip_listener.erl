@@ -1,26 +1,11 @@
-%%%----------------------------------------------------------------------
-%%% File    : esip_listener.erl
-%%% Author  : Evgeniy Khramtsov <ekhramtsov@process-one.net>
-%%% Purpose : 
-%%% Created : 9 Jan 2011 by Evgeniy Khramtsov <ekhramtsov@process-one.net>
+%%%-------------------------------------------------------------------
+%%% @author Evgeniy Khramtsov <ekhramtsov@process-one.net>
+%%% @copyright (C) 2011, Evgeniy Khramtsov
+%%% @doc
 %%%
-%%%
-%%% Copyright (C) 2002-2016 ProcessOne, SARL. All Rights Reserved.
-%%%
-%%% Licensed under the Apache License, Version 2.0 (the "License");
-%%% you may not use this file except in compliance with the License.
-%%% You may obtain a copy of the License at
-%%%
-%%%     http://www.apache.org/licenses/LICENSE-2.0
-%%%
-%%% Unless required by applicable law or agreed to in writing, software
-%%% distributed under the License is distributed on an "AS IS" BASIS,
-%%% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-%%% See the License for the specific language governing permissions and
-%%% limitations under the License.
-%%%
-%%%----------------------------------------------------------------------
-
+%%% @end
+%%% Created :  9 Jan 2011 by Evgeniy Khramtsov <ekhramtsov@process-one.net>
+%%%-------------------------------------------------------------------
 -module(esip_listener).
 
 -behaviour(gen_server).
@@ -34,7 +19,7 @@
 
 -include("esip_lib.hrl").
 -define(TCP_SEND_TIMEOUT, 10000).
--record(state, {listeners = dict:new()}).
+-record(state, {listeners = dict:new() :: dict()}).
 
 %%%===================================================================
 %%% API
